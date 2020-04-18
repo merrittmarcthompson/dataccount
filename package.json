@@ -1,0 +1,14 @@
+{
+  "name": "dataccount",
+  "version": "1.0.0",
+  "description": "Personal data access system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Merritt Thompson <merrittmarcthompson@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
