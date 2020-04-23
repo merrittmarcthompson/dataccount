@@ -5,15 +5,19 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/api/owner/accessRequestItems', (req, res) => {
+  console.log('/api/owner/accessRequestItems');
+
+});
+
 app.get('/api/owner/accessRequests', (req, res) => {
-  console.log('in get access requests new');
+  console.log('/api/owner/accessRequests');
   res.status(200);
-  res.set('Content-Type', 'text/html');
   res.send({
     requests: [
       {
         id: 2345,
-        by: "www.amazon.com",
+        by: "www.amazonarama.com",
         timeStamp: "04/20/2020 11:36:05",
       }, {
         id: 2357,

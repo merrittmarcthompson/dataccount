@@ -6,32 +6,38 @@ import AccessorScreen from './AccessorScreen.js';
 
 function StartScreen(props) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card>
       <Card.Body>
         <Card.Title>Dataccount test page</Card.Title>
-        <Card.Text>
-          <p>Try being a personal data owner:</p>
-          <p>
-            <Button
-              onClick={() => props.setWhichScreen('owner')}
-            >
-              Owner
-                    </Button>
-          </p>
-          <p>Try being a personal data accessor:</p>
-          <p><Button >Accessor</Button></p>
-        </Card.Text>
+        <p>Try being a personal data owner:</p>
+        <p>
+          <Button
+            onClick={() => props.setWhichScreen('owner')}
+          >
+            Owner
+          </Button>
+        </p>
+        <p>Try being a personal data accessor:</p>
+        <p><Button >Accessor</Button></p>
       </Card.Body>
     </Card>
   );
 }
 
+const floatRight = {
+  float: 'right'
+};
+
+const floatLeft = {
+  float: 'left'
+};
+
 function OwnerScreenSwitcher(props) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card >
       <Card.Body>
-        <Card.Title>Pending Access Requests</Card.Title>
-        <Button variant="secondary" size="sm" onClick={() => props.setWhichScreen('start')}>
+        <Card.Title style={floatLeft}>Pending Access Requests</Card.Title>
+        <Button style={floatRight} variant="outline-secondary" size="sm" onClick={() => props.setWhichScreen('start')} >
           Back
         </Button>
       </Card.Body>
@@ -42,7 +48,7 @@ function OwnerScreenSwitcher(props) {
 
 function AccessorScreenSwitcher(props) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card>
       <Card.Body>
         <Card.Title>This is the accessor page</Card.Title>
         <Button variant="secondary" size="sm" onClick={() => props.setWhichScreen('start')}>

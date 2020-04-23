@@ -17,6 +17,6 @@ export function callWebApi(verb, resourcePath, callback) {
   );
   fetch(resourcePath, { method: verb, headers: headers })
     .then(response => response.json())
-    .then(json => console.log(json) || callback(JSON.parse(json)))
+    .then(json => console.log(json) || callback(json))
     .catch(error => console.error(error))
 }
